@@ -98,6 +98,8 @@ class ChannelItemCategory(Base):
 
 
 class ChannelItem(Base):
+    """This is the item in a channel"""
+
     __tablename__ = 'channel_items'
 
     id = Column(Integer, primary_key=True)
@@ -158,7 +160,7 @@ class ChannelItem(Base):
     guid = Column(String)
     """A string that uniquely identifies the item."""
 
-    guildIsAPermaLink = Column(Boolean)
+    guidIsAPermaLink = Column(Boolean)
     
     pubDate = Column(DateTime)
     """Indicates when the item was published.
